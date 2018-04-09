@@ -25,12 +25,3 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
-
-signingConfigs {
-    release {
-        storeFile file("../DotApp.keystore")
-        storePassword System.getenv('STORE_PASSWORD')
-        keyAlias "DotApp"
-        keyPassword System.getenv('KEY_PASSWORD')
-    }
-}

@@ -10,6 +10,14 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        release {
+            storeFile file("../DotApp.keystore")
+            storePassword System.getenv('STORE_PASSWORD')
+            keyAlias "DotApp"
+            keyPassword System.getenv('KEY_PASSWORD')
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
